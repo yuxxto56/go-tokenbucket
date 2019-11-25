@@ -22,7 +22,7 @@ func HanderOverSell(w http.ResponseWriter, r *http.Request){
 		"127.0.0.1",//ip
 		"6379", //端口号
 		"tcp",//协议
-		30,//当前key 过期时间,不过期则填写0即可
+		30,//当前key 过期时间,不过期则填写0即可，单位:秒
 	})
 	defer tokens.Close()
 	tokens.SetTicker()
